@@ -11,7 +11,7 @@ public class SkeletorController : MonoBehaviour
     private Vector2 movement;
     private float moveX;
     private float moveY;
-    private bool isMoveing = false;
+    private bool isMoveing = false; 
     private Animator animator;
 
     void Start()
