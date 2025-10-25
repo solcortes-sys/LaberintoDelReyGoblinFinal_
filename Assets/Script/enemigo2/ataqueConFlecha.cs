@@ -31,14 +31,14 @@ public class ataqueConFlecha : MonoBehaviour
             _random = Random.Range(6, 10);
             if (_asoma == false)
             {
-                _rb.MovePosition(new Vector3(transform.position.x, transform.position.y + 80 * Time.fixedDeltaTime, transform.position.z));
+                _rb.MovePosition(new Vector3(transform.position.x, transform.position.y + 50 * Time.fixedDeltaTime, transform.position.z));
                 _asoma = true;
                 _tiempo = _tiempo + 5f;
 
             }
             else if (_asoma == true)
             {
-                _rb.MovePosition(new Vector3(transform.position.x, transform.position.y - 80 * Time.fixedDeltaTime, transform.position.z));
+                _rb.MovePosition(new Vector3(transform.position.x, transform.position.y - 50 * Time.fixedDeltaTime, transform.position.z));
                 Instantiate(flechaEnemiga, new Vector3(_rb.position.x, _rb.position.y - 1, 0), Quaternion.identity);
 
                 _asoma = false;

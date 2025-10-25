@@ -276,6 +276,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7588324522774166936, guid: 78a397d2084dfed4596c86652e171de3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1196,14 +1200,6 @@ PrefabInstance:
       value: AtaqueDArqueroSqueletorFlechaPower_0004_0 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5920329115007104812, guid: 78a397d2084dfed4596c86652e171de3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5920329115007104812, guid: 78a397d2084dfed4596c86652e171de3, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5920329115007104812, guid: 78a397d2084dfed4596c86652e171de3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.231386
       objectReference: {fileID: 0}
@@ -1332,8 +1328,8 @@ Transform:
   m_GameObject: {fileID: 2085463992}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.72, y: 1.12, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.4, z: 1}
+  m_LocalPosition: {x: -4.43, y: 0.92, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1403,7 +1399,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4851663337857025302, guid: 29328f20e7d17e941b0256da5d1e9880, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
