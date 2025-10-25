@@ -27,11 +27,13 @@ public class ataqueConFlecha : MonoBehaviour
         {
             Debug.Log(_tiempo);
             _tiempo=0;//empieza desde cero
-            _random = Random.Range(2, 5);
+            _random = Random.Range(6, 10);
             if (_asoma == false)
             {
                 _rb.MovePosition(new Vector3(transform.position.x, transform.position.y + 80 * Time.fixedDeltaTime, transform.position.z));
                 _asoma = true;
+                _tiempo = _tiempo + 5f;
+
             }
             else if (_asoma == true)
             {
