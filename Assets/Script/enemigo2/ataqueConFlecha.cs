@@ -3,6 +3,7 @@ using UnityEngine;
 public class ataqueConFlecha : MonoBehaviour
 {
     private Rigidbody2D _rb;
+    public GameObject flechaEnemiga; // prefab de la flecha 
     private float _tiempo;//variable para medir el tiempo
     private float _random;//variable para el numero aleatoreo
     private bool _asoma=false;//se fija si se asoma el arquero
@@ -32,6 +33,19 @@ public class ataqueConFlecha : MonoBehaviour
             {
                 _rb.MovePosition(new Vector3(transform.position.x, transform.position.y + 80 * Time.fixedDeltaTime, transform.position.z));
                 _asoma = true;
+
+                // disparo de la flecha
+                if (Random.Range(0,20) > 10f)// no siempre dispara
+                {
+                    // instanciar una nueva flecha en la posición actual del enemigo
+                    Instantiate(flechaEnemiga, new Vector3(_rb.position.x, _rb.position.y - 1, 0), Quaternion.identity);
+                }
+
+
+
+
+
+
                 _tiempo = _tiempo + 5f;
 
             }

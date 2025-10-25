@@ -429,6 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3efec105f2a89d044b68f1a6f04f9580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ataqueConFlecha
+  flechaEnemiga: {fileID: 4674338608358988368, guid: f9d8325e4580d5441854733b923943eb, type: 3}
 --- !u!212 &692742244
 SpriteRenderer:
   m_ObjectHideFlags: 0
