@@ -447,7 +447,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -536,6 +536,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3587239441651474818, guid: 5915509415d745145bd991dfc5f4cfc6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3692631622754124309, guid: 5915509415d745145bd991dfc5f4cfc6, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -608,7 +612,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 3808670356905996805, guid: 968fe0efcaea0e642a41cceda8a02b22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -982,6 +986,10 @@ PrefabInstance:
     - target: {fileID: 1516367132417608911, guid: 5915509415d745145bd991dfc5f4cfc6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587239441651474818, guid: 5915509415d745145bd991dfc5f4cfc6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3692631622754124309, guid: 5915509415d745145bd991dfc5f4cfc6, type: 3}
       propertyPath: m_Name
