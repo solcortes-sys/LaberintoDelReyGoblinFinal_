@@ -14,6 +14,8 @@ public class UImanagement : MonoBehaviour
     public int vidacount2;
     public int vidacount3;
     private char character; // barra de vida
+    public Animator animatorCamina;
+    public Animator animatorIdle;
 
 
 
@@ -23,6 +25,10 @@ public class UImanagement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
+        animatorCamina = GetComponent<Animator>(); // obtiene el componente animator camina
+        animatorIdle = GetComponent<Animator>(); // obtiene la animacion del idle
+        
         Scene currentScene = SceneManager.GetActiveScene();        // Obtiene la escena activa
         if (currentScene.name == "Room1")
         {
