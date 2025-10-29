@@ -63,14 +63,14 @@ public class SkeletorController : MonoBehaviour
                 movement = new Vector2(direction.x, direction.y);
                 Debug.Log("Direccion X " + direction.x);
                 Debug.Log("Direccion y " + direction.y);
-/*
+
                 
                 if (distanceToPlayer <= attackRadius)
                 {
                     if (!isAttacking)
                     {
-                        // animator.SetTrigger("Attack");
-                        animator.SetBool("Attack", true);
+                        animator.SetTrigger("Attack");
+                        //animator.SetBool("Attack", true);
                         OnAttack();
                         isAttacking = true;
                         attackColdownTimer = 1.0f; // Reiniciar el temporizador de enfriamiento
@@ -79,7 +79,7 @@ public class SkeletorController : MonoBehaviour
 
                     }
                 }
-*/
+
             }
             else
             {
