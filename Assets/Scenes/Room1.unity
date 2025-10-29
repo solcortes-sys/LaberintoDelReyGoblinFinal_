@@ -211,11 +211,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &766046426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 360087029298821886, guid: 9c25bafe2457e804c83a477d6bc562ae, type: 3}
+  m_PrefabInstance: {fileID: 8588430111569655326}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &781426589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4291725565892809856, guid: 9c25bafe2457e804c83a477d6bc562ae, type: 3}
   m_PrefabInstance: {fileID: 8588430111569655326}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &781426596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766046426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d3485d961d63ec4aa4f988fcb8db76a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  maxHealth: 100
 --- !u!1 &1313537209
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,9 +244,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1313537210}
   - component: {fileID: 1313537211}
+  - component: {fileID: 1313537212}
   m_Layer: 0
   m_Name: Enemy_Meele
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,7 +261,7 @@ Transform:
   m_GameObject: {fileID: 1313537209}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.175, y: 0.159, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6375, y: 0.7039063, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -278,12 +297,25 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.6
+--- !u!114 &1313537212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313537209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 496965dc60316b049bfa17fda84e0870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_Meele
+  damage: 10
 --- !u!1 &1530766164
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +778,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 781426589}
+    - target: {fileID: 4133459928025762072, guid: 5915509415d745145bd991dfc5f4cfc6, type: 3}
+      propertyPath: attackController
+      value: 
+      objectReference: {fileID: 781426589}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -867,6 +903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 360087029298821886, guid: 9c25bafe2457e804c83a477d6bc562ae, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1930011893576076602, guid: 9c25bafe2457e804c83a477d6bc562ae, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -914,7 +954,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 360087029298821886, guid: 9c25bafe2457e804c83a477d6bc562ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 781426596}
   m_SourcePrefab: {fileID: 100100000, guid: 9c25bafe2457e804c83a477d6bc562ae, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

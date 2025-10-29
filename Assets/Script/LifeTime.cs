@@ -9,4 +9,5 @@ public class LifeTime : MonoBehaviour
         Destroy(gameObject, liveTime);
     }
 
-}  
+
+}
