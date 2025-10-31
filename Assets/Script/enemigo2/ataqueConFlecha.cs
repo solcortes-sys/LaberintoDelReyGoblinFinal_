@@ -28,7 +28,7 @@ public class ataqueConFlecha : MonoBehaviour
         {
             Debug.Log(_tiempo);
             _tiempo=0;//empieza desde cero
-            _random = Random.Range(6, 10);
+            _random = Random.Range(6, 9);
             if (_asoma == false)
             {
                 _rb.MovePosition(new Vector3(transform.position.x, transform.position.y + 50 * Time.fixedDeltaTime, transform.position.z));
@@ -38,9 +38,8 @@ public class ataqueConFlecha : MonoBehaviour
             }
             else if (_asoma == true)
             {
-                _rb.MovePosition(new Vector3(transform.position.x, transform.position.y - 50 * Time.fixedDeltaTime, transform.position.z));
                 Instantiate(flechaEnemiga, new Vector3(_rb.position.x, _rb.position.y - 1, 0), Quaternion.identity);
-
+                _rb.MovePosition(new Vector3(transform.position.x, transform.position.y - 50 * Time.fixedDeltaTime, transform.position.z));
                 _asoma = false;
             }
         }

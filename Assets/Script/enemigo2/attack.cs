@@ -4,6 +4,8 @@ public class attack : MonoBehaviour
 {
     private Rigidbody2D _rb; // referencia al componente Rigidbody2D de la flecha
     private float _speed = 20f; // velocidad de la flecha
+    private float _tiempo;//variable para medir el tiempo
+
 
 
 
@@ -16,8 +18,12 @@ public class attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject, 2f); // destruir la flecha después de 2 segundos para evitar que permanezca en la escena
-        _rb.position += Vector2.right * _speed * Time.deltaTime; // mover la flecha a una velocidad constante
+
+            Destroy(gameObject, 2f); // destruir la flecha después de 2 segundos para evitar que permanezca en la escena
+            _rb.position += Vector2.right * _speed * Time.deltaTime; // mover la flecha a una velocidad constante
+
+        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
