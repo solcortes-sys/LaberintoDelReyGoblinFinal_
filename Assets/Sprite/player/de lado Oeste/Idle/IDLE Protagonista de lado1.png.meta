@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 06e88956d55aa5c45899aeb2d45e4b30
+guid: 6e0e62b613be6af439cea445f2d9dbeb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8881999337000516371
-    second: CAMINA Protagonista de lado1_0
+      213: -1618212214334200259
+    second: IDLE Protagonista de lado1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CAMINA Protagonista de lado1_0
+      name: IDLE Protagonista de lado1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31bbb219653334b70800000000000000
-      internalID: 8881999337000516371
+      spriteID: d3669619094fa89e0800000000000000
+      internalID: -1618212214334200259
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CAMINA Protagonista de lado1_0: 8881999337000516371
+      IDLE Protagonista de lado1_0: -1618212214334200259
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

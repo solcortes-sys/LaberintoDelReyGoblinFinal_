@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fed1d542760e0a44db033d9c59ca62b9
+guid: 7656c14a9b2536149bf692c928b5e00d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8408206230049017373
-    second: CAMINAR Protagonista frente1_0
+      213: 8989566961254167800
+    second: CAMINA Protagonista de lado2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CAMINAR Protagonista frente1_0
+      name: CAMINA Protagonista de lado2_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 62
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e1b3bb7bfc005b80800000000000000
-      internalID: -8408206230049017373
+      spriteID: 8f47422c58b51cc70800000000000000
+      internalID: 8989566961254167800
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CAMINAR Protagonista frente1_0: -8408206230049017373
+      CAMINA Protagonista de lado2_0: 8989566961254167800
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

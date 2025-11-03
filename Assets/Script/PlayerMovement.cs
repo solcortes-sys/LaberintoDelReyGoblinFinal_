@@ -10,12 +10,13 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 lastDirection;
     private float moveX;
     private float moveY;
-   
+    private Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
+        animator = GetComponent<Animator>();
         playerRB = GetComponent<Rigidbody2D>();
         Debug.Log("sInicia el juego");
 
@@ -26,16 +27,23 @@ public class PlayerMovement : MonoBehaviour
     {
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
-       
+        animator.SetFloat("MoveX", moveX);
+        animator.SetFloat("MoveY", moveY);
 
         if (moveX != 0 || moveY != 0)
         {
-            
-            lastDirection = new Vector2(moveX, moveY).normalized;
+            animator.SetFloat("LastX", moveX);
+            animator.SetFloat("LastY", moveY);
+
+           
             Debug.Log("Movex" + moveX);
             Debug.Log("MoveY" + moveY);
         }
-
+        else
+        {
+            animator.SetFloat("LastX", 0);
+            animator.SetFloat("LastY", -1);
+        }   
         moveInput = new Vector2(moveX, moveY).normalized;
 
     }
