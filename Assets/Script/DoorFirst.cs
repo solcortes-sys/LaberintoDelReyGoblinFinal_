@@ -5,8 +5,18 @@ public class DoorFirst : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        SceneManager.LoadScene(0);
-        Debug.Log($"Cargando siguiente escena: índice 0");
+        if (collision.gameObject.tag == "Player")
+
+        {
+
+            if (collision.gameObject.GetComponent<Player>().key == false)
+            {
+                Debug.Log("No tienes la llave para abrir la puerta");
+                return;
+            }
+            SceneManager.LoadScene(1);
+            Debug.Log($"Cargando siguiente escena: índice 1");
+
+        }
     }
 }

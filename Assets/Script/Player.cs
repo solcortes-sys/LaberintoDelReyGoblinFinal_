@@ -6,10 +6,12 @@ public class Player : MonoBehaviour
 
     [SerializeField] private int maxHealth = 100;
     private int currentHealth;
+    public bool key;
 
     void Awake()
     {
         currentHealth = maxHealth;
+        key = false;
     }
 
     public void TakeDamage(int amount)
@@ -29,6 +31,14 @@ public class Player : MonoBehaviour
         // Instantiate(deathEffect, transform.position, Quaternion.identity); //Agregar la animacion cuando este creada
         Destroy(gameObject);
 
+        int currentSceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(currentSceneIndex);
+
         Debug.Log("Ingresa a Nuerte de player");
+    }
+    public void ObtainKey()
+    {
+        key = true;
+        Debug.Log("Llave obtenida");
     }
 }

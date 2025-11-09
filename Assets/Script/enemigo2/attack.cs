@@ -6,7 +6,7 @@ public class attack : MonoBehaviour
     private float _speed = 20f; // velocidad de la flecha
     private float _tiempo;//variable para medir el tiempo
 
-
+    [SerializeField] private GameObject _flecha;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,12 +25,23 @@ public class attack : MonoBehaviour
         
 
     }
-
+/*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) // si la flecha colisiona con un objeto que tiene la etiqueta "player"
         {
             Destroy(collision.gameObject); // destruir el objeto player que colisiona con el misil
         }
+    }
+*/
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.GetComponent<Player>().TakeDamage(20);
+            Destroy(gameObject);
+
+        }
+        Debug.Log("Entro al tag Enemy");
     }
 }

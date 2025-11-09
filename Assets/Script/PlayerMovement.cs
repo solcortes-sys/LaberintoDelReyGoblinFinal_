@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private bool lookRight;
     // Variable para almacenar la �ltima direcci�n v�lida (LastX, LastY)
     public Vector2 lastDirection;
+    public Vector2 direction;
     private float moveX;
     private float moveY;
     private Animator animator;
@@ -27,25 +28,23 @@ public class PlayerMovement : MonoBehaviour
     {
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
+        
         animator.SetFloat("MoveX", moveX);
         animator.SetFloat("MoveY", moveY);
-
+        moveInput = new Vector2(moveX, moveY).normalized;
         if (moveX != 0 || moveY != 0)
         {
             animator.SetFloat("LastX", moveX);
             animator.SetFloat("LastY", moveY);
 
            
-            Debug.Log("Movex" + moveX);
+            Debug.Log("MoveX" + moveX);
             Debug.Log("MoveY" + moveY);
+        
         }
-        else
-        {
-            animator.SetFloat("LastX", 0);
-            animator.SetFloat("LastY", -1);
-        }   
-        moveInput = new Vector2(moveX, moveY).normalized;
+        lastDirection = new Vector2(moveX, moveY).normalized;
 
+        
     }
     private void FixedUpdate()
     {
@@ -53,9 +52,4 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void Spin() //Girar
-    {
-        lookRight = !lookRight; //MirarDerecha
-        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
-    }
 }

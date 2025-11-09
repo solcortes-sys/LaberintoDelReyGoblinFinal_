@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
     // Enemigo Vida
     [SerializeField] private float life;
     [SerializeField] private GameObject deathEffect;
+    [SerializeField] private GameObject key;
 
     public void TakeDamage(float damage)
     {
@@ -23,5 +24,7 @@ public class Enemy : MonoBehaviour
         // Instantiate(deathEffect, transform.position, Quaternion.identity); //Agregar la animacion cuando este creada
         Destroy(gameObject);
         Debug.Log("Ingresa a Nuerte");
+        key.SetActive(true);
+
     }
 }

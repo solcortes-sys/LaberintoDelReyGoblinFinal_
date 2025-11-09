@@ -12,7 +12,8 @@ public class ShotPlayer : MonoBehaviour
 
    
     // Variable para almacenar la última dirección válida (LastX, LastY)
-    private Vector2 lastDirection;
+    
+    //private Vector2 lastDirection;
 
     private void Update()
     {
@@ -38,8 +39,9 @@ public class ShotPlayer : MonoBehaviour
             else
             {
                 // Dirección por defecto si el jugador no se ha movido
-                arrowScript.SetDirection(Vector2.right);
+                arrowScript.SetDirection(Vector2.down);
             }
+           
         }
     }
 }
