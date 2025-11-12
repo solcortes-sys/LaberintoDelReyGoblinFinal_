@@ -43,7 +43,13 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("MoveY" + moveY);
 
         }
-        lastDirection = new Vector2(moveX, moveY).normalized;
+
+        Vector2 direction = new Vector2(moveX, moveY).normalized;
+
+        if (direction != Vector2.zero)
+        {
+            lastDirection = direction;
+        }
 
 
     }
