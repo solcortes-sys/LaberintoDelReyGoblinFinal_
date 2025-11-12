@@ -192,6 +192,10 @@ PrefabInstance:
       propertyPath: doorFalse
       value: 
       objectReference: {fileID: 1380582088}
+    - target: {fileID: 654065038955287191, guid: 6ba0840862f28dd48ba99fd05058fda4, type: 3}
+      propertyPath: doorFalse1
+      value: 
+      objectReference: {fileID: 1530766164}
     - target: {fileID: 738739227336695183, guid: 6ba0840862f28dd48ba99fd05058fda4, type: 3}
       propertyPath: m_Name
       value: Key

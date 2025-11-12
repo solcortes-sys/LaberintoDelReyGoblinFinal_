@@ -14,9 +14,12 @@ public class DoorFirst : MonoBehaviour
                 Debug.Log("No tienes la llave para abrir la puerta");
                 return;
             }
+            int currentIndex = SceneManager.GetActiveScene().buildIndex;
+            //int targetIndex = currentIndex ;
+            int totalScenes = SceneManager.sceneCountInBuildSettings;
+           // if (targetIndex >= totalScenes) targetIndex = 0;
             SceneManager.LoadScene(1);
-            Debug.Log($"Cargando siguiente escena: índice 1");
-
+            Debug.Log($"Cargando siguiente escena: índice {1}");
         }
     }
 }

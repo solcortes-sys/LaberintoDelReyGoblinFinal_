@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
-        
+
         animator.SetFloat("MoveX", moveX);
         animator.SetFloat("MoveY", moveY);
         moveInput = new Vector2(moveX, moveY).normalized;
@@ -37,14 +38,30 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("LastX", moveX);
             animator.SetFloat("LastY", moveY);
 
-           
+
             Debug.Log("MoveX" + moveX);
             Debug.Log("MoveY" + moveY);
-        
+
         }
         lastDirection = new Vector2(moveX, moveY).normalized;
 
-        
+
+    }
+    private void OnTriggerStay2D(Collider2D collision)// se llama cuando el collider del objeto con el que colisiona permanece en contacto
+    {
+
+        if ((Input.GetKey(KeyCode.K)) && (collision.gameObject.layer == LayerMask.NameToLayer("start"))) // si se presiona la tecla espacio y el objeto con el que colisiona tiene la etiqueta "start"
+        {
+            SceneManager.LoadScene("Room1");// carga la escena llamada "Room1"
+        }
+
+        if ((collision.gameObject.layer == LayerMask.NameToLayer("quit")) && (Input.GetKey(KeyCode.K))) // si el objeto con el que colisiona tiene la etiqueta "quit"
+        {
+            Debug.Log("salir"); //***************   borrar esta linea cuando funcione   *********** 
+            Application.Quit(); // cierra la aplicacion
+        }
+
+
     }
     private void FixedUpdate()
     {

@@ -3,6 +3,8 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
     [SerializeField] GameObject doorFalse;
+    [SerializeField] GameObject doorFalse1;
+    [SerializeField] GameObject doorFalse2;
     [SerializeField] GameObject doorTrue;
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -30,7 +30,7 @@ public class Arrow : MonoBehaviour
         if (collision.gameObject.tag=="Enemy")
         {
             collision.GetComponent<Enemy>().TakeDamage(damage);
-            Destroy(gameObject);
+            //Destroy(gameObject);
             
         }
         Debug.Log("Entro al tag Enemy");

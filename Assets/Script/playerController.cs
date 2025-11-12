@@ -8,6 +8,13 @@ public class playerController : MonoBehaviour
     [SerializeField] private Transform attackController;
     [SerializeField] private float radioAtaque;
     [SerializeField] private float damage;
+    private Animator _animator;
+
+    private void Start()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+    }
     private void OnMove(InputValue InputValue)
     {
         Vector2 move = InputValue.Get<Vector2>();
@@ -20,6 +27,7 @@ public class playerController : MonoBehaviour
         if (Input.GetButtonDown("Fire2"))
         {
             OnAttack();
+            _animator.SetTrigger("Attack");
         }
     }
     private void OnAttack()
@@ -32,6 +40,7 @@ public class playerController : MonoBehaviour
             {
                 enemyLife.TakeDamage(damage);
             }
+        
         }
         Debug.Log("se ejecuto el Metodo Attack");
     }
