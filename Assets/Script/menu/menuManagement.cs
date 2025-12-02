@@ -34,7 +34,7 @@ public class menuManagement : MonoBehaviour
             SceneManager.LoadScene("Room1");// carga la escena llamada "Room1"
         }
 
-        if ((collision.gameObject.layer == LayerMask.NameToLayer("quit")) && (Input.GetKey(KeyCode.H))) // si el objeto con el que colisiona tiene la etiqueta "quit"
+        if ((collision.gameObject.layer == LayerMask.NameToLayer("quit")) && (Input.GetKey(KeyCode.L))) // si el objeto con el que colisiona tiene la etiqueta "quit"
         {
             Debug.Log("salir"); //***************   borrar esta linea cuando funcione   *********** 
             Application.Quit(); // cierra la aplicacion
